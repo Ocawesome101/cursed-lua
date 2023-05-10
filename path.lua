@@ -1,6 +1,11 @@
 -- allows referencing file paths like this:
--- local baz_txt = 
--- this is very cursed
+-- local baz_txt = "$PWD"/foo/bar/baz.txt
+-- OR
+-- local baz_txt = path.pwd/foo/bar/paz.txt
+-- these can be :opened at any point,
+-- and called() to list the contents of a directory
+-- (if posix.dirent is present).
+-- this is very cursed.
 
 local string_mt = debug.getmetatable("")
 local string_div = string_mt.__div
